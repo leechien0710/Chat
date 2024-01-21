@@ -1,0 +1,27 @@
+.Auth{
+  background: linear-gradient(red,blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
+}
+.content{
+  background-color: white;
+  border-radius: 10px;
+  padding: 40px;
+}
+.imgLogo{
+  border-radius: 50px;
+}
+.imgContain{
+   display: flex;
+   justify-content: center;
+}
+.forgot{
+  display: flex;
+  justify-content: right;
+}
+.btn-primary__login{
+  width: 100%;
+}
+  
