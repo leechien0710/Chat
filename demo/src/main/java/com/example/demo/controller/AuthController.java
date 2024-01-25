@@ -42,8 +42,10 @@ public class AuthController {
         // Trả về jwt cho người dùng.
         String accessToken = tokenProvider.generateToken((CustomUserDetail) authentication.getPrincipal());
         RefreshToken refreshToken = refreshTokenService.createRefreshToken(((CustomUserDetail) authentication.getPrincipal()).getUser().getId());
+        String role = ((CustomUserDetail) authentication.getPrincipal()).getUser().getRole();
         loginReponse.setAccessToken(accessToken);
         loginReponse.setRefreshToken(refreshToken.getToken());
+        loginReponse.setRole(role);
         return ResponseEntity.ok(loginReponse);
     }
     @PostMapping("/signup")

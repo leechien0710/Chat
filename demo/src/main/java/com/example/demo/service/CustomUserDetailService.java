@@ -43,6 +43,7 @@ public class CustomUserDetailService implements UserDetailsService {
             throw new UserExitsException("User already exist");
         }
         user.setPassword(passwordEncoder.encode(user.getPassword()));
+        user.setRole("ROLE_USER");
         user.setFunds(0);
         return userRepository.save(user);
     }

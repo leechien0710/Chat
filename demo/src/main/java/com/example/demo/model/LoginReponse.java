@@ -1,6 +1,18 @@
 package com.example.demo.model;
 
+import com.example.demo.entity.User;
+
 public class LoginReponse {
+    private String role;
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
+
     private String AccessToken;
     private String RefreshToken;
 

@@ -14,6 +14,16 @@ public class User {
     private UUID id;
     private String username;
     private String password;
+    private String role;
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
+
     private float funds;
     public UUID getId() {
         return id;

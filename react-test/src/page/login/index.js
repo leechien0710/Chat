@@ -25,7 +25,11 @@ function Login() {
                 timer: 1000,
             })
             setTimeout(() => {
+                if(res.data.role==='ROLE_USER'){
                 navigate('/dashboard')
+                }else{
+                  navigate('/admin')
+                }
             }, 1000);
         }).catch((err) => {
             Swal.fire({

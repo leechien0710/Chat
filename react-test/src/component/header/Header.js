@@ -43,6 +43,7 @@ function Header(props) {
         })
         .catch(error => {
           console.error('Error fetching user info:', error);
+          navigate("/login")
         });
         const refreshTokenInterval = setInterval(() => {
           getNewAccessToken();
@@ -60,6 +61,7 @@ function Header(props) {
     localStorage.removeItem('refreshToken');
     navigate('/login')
   }
+   
   return (
     <div className="header" style={{backgroundColor:"#F8F9FA"}}>
     <div className="container">
